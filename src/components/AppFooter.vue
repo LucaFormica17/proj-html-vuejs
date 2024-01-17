@@ -3,6 +3,67 @@ export default {
     name: 'AppFooter',
     data() {
         return {
+            addresses: [
+                {
+                    label: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+                    url: "#"
+                },
+                {
+                    label: "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
+                    url: "#"
+                },
+                {
+                    label: "support@maxcoach.com",
+                    url: "#"
+                }
+            ],
+            explore: [
+                {
+                    label: "Start here",
+                    url: "#"
+                },
+                {
+                    label: "Blog",
+                    url: "#"
+                },
+                {
+                    label: "About us",
+                    url: "#"
+                },
+
+            ],
+            explore2: [
+                {
+                    label: "Success story",
+                    url: "#"
+                },
+                {
+                    label: "Courses",
+                    url: "#"
+                },
+                {
+                    label: "Contact us",
+                    url: "#"
+                },
+            ],
+            information: [
+                {
+                    label: "Membership",
+                    url: "#"
+                },
+                {
+                    label: "Purchase guide",
+                    url: "#"
+                },
+                {
+                    label: "Privacy policy",
+                    url: "#"
+                },
+                {
+                    label: "Terms of services",
+                    url: "#"
+                },
+            ]
 
         }
     },
@@ -14,11 +75,12 @@ export default {
             <div class="row">
                 <div class="col-6">
                     <h6 class="mb-3">Address</h6>
+
                     <ul>
-                        <li>382 NE 191st St &#35; 87394 Miami, FL 33179-3899</li>
-                        <li>&plus;1 &#40;305&#41; 547-9909 &#40;9am - 5pm EST, Monday - Friday&#41;</li>
-                        <li>support&commat;maxcoach.com</li>
-                        <li>
+                        <li v-for="address, index in addresses" :key="index">
+                            {{address.label}}
+                        </li>
+                        <li class="mt-3 ">
                             <span class="me-4"><i class="fa-brands fa-square-facebook"></i></span>
                             <span class="me-4"><i class="fa-brands fa-twitter"></i></span>
                             <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
@@ -31,16 +93,16 @@ export default {
                         <h6 class="mb-3">Explore</h6>
                         <div class="col-6">
                             <ul>
-                                <li>Start here</li>
-                                <li>Blog</li>
-                                <li>About us</li>
+                                <li v-for="ex, index in explore" :key="index">
+                                    {{ex.label}}
+                                </li>
                             </ul>
                         </div>
                       <div class="col-6">
                             <ul>
-                                <li>Success story</li>
-                                <li>Courses</li>
-                                <li>Contact us</li>
+                                <li v-for="ex2, index in explore2" :key="index">
+                                    {{ex2.label}}
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -48,10 +110,9 @@ export default {
                 <div class="col-3">
                     <h6 class="mb-3">Information</h6>
                     <ul>
-                        <li>Membership</li>
-                        <li>Purchase guide</li>
-                        <li>Privacy policy</li>
-                        <li>Terms of services</li>
+                        <li v-for="info, index in information" :key="index">
+                            {{info.label}}
+                        </li>
                     </ul>
                 </div>
             </div>
