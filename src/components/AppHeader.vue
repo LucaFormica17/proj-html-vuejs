@@ -4,9 +4,9 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
+    <header>
         
-    </div>
+    </header>
 </template>
 <style lang="">
     
