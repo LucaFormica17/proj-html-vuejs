@@ -1,6 +1,7 @@
 import{ reactive } from 'vue';
 export const store = reactive({
 
+
     MostViewed:[
         {
             img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/12/home-personal-finance-blog-03-480x352.jpg',
@@ -18,5 +19,6 @@ export const store = reactive({
         },
     ]
    
+
 })
 
