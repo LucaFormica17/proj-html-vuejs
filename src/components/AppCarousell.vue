@@ -1,0 +1,188 @@
+<script>
+import { store } from '../store.js'
+
+export default {
+    data() {
+        return {
+            store
+        }
+    },
+}
+</script>
+<template lang="">
+    <div class="bg py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-container">
+                        <p>great words about maxcoach</p>
+                        <strong>Our <span>top learnes'</span> verbatim</strong>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="swiper-container">
+                        <div class="swiper-card" v-for="(slide, index) in store.carousell">
+                            <p class="mb-3">{{slide.title}}</p>
+                            <span>{{slide.paragraph}}</span>
+                            <div class="profile">
+                                <img :src="slide.img" :alt="slide.name">
+                                <div class="profile-text">
+                                    <p>{{slide.name}}</p>
+                                    <span>{{slide.role}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <div class="rounded-btn active"></div>
+                        <div class="rounded-btn"></div>
+                        <div class="rounded-btn"></div>
+                        <div class="rounded-btn"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="text-center mt-5">
+                        <span class="violet-text">Start today for getting </span>
+                        <span class="green-text">Online certification</span>
+                        <h2>You can be own guiding star with our help!</h2>
+                        <button class="btn my-btn my-4">Get stared now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="pattern-1" src="../images/maxcoach-shape-01.png" alt="pattern">
+        <img class="pattern-2" src="../images/maxcoach-shape-02.png" alt="pattern">
+    </div>
+</template>
+<style lang="scss" scoped>
+@use './styles/generals.scss';
+@use './styles/partials/variables' as*;
+
+    .bg{
+        background-color: $bg_carou-footer;
+        position: relative;
+
+        .pattern-1{
+            position: absolute;
+            bottom: 13%;
+            left: 16%;
+        }
+
+        .pattern-2{
+            position: absolute;
+            bottom: 3%;
+            right: 10%;
+        }
+
+        .text-container{
+            text-align: center;
+            margin: 50px 0;
+            p{
+                color: $dark_text;
+                text-transform: uppercase;
+                
+            }
+    
+            strong{
+                color: $main_violet;
+                font-size: 35px;
+                
+    
+                span{
+                    color: $main_green;
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .swiper-container{
+            
+            display: flex;
+            
+
+            .swiper-card{
+                background-color: white;
+                width: calc(100% / 3 - 80px);
+                margin: 0 40px;
+                padding: 30px;
+
+                p{
+                    color: $main_violet;
+                    font-weight: bolder;
+                }
+
+                span{
+                    color: $dark_text;
+                    font-size: 12px;
+                }
+
+                .profile{
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+
+                    img{
+                        width: 20%;
+                        border-radius: 50%;
+                    }
+
+                    .profile-text{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 20px;
+                        justify-content: space-between;
+
+                        p{
+                            font-size: 12px;
+                        }
+
+                        span{
+                            font-size: 10px;
+                            color: grey;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+
+            .rounded-btn{
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $violet_text;
+                margin: 0 10px;
+
+                &.active{
+                    width: 10px;
+                    height: 10px;
+                    background-color: $main_violet;
+                }
+            }
+        }
+
+        .violet-text,
+        h2{
+            color: $main_violet;
+        }
+
+        .green-text{
+            color: $main_green;
+        }
+
+        .my-btn{
+            background-color: $main_green;
+            color: white;
+            font-weight: 600;
+            padding: 10px 70px;
+        }
+    }
+    
+</style>

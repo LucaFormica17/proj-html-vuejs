@@ -3,13 +3,14 @@
 import { store } from '../store.js'
 import Jumbotron from './Jumbotron.vue';
 import SectionMostViewed from './SectionMostViewed.vue';
+import AppCarousell from './AppCarousell.vue';
 
 export default {
     name: 'AppMain',
     components:{
         Jumbotron,
         SectionMostViewed,
-
+        AppCarousell,
     },
     data() {
         return {
@@ -22,7 +23,7 @@ export default {
     <main>
         <Jumbotron />
         <SectionMostViewed />
-
+        <AppCarousell />
     </main>
 </template>
 <style lang="">
