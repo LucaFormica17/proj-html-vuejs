@@ -21,7 +21,6 @@ export default {
     <main>
         <Jumbotron />
         <SectionMostViewed />
-
     </main>
 </template>
 <style lang="">

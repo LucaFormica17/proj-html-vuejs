@@ -1,8 +1,11 @@
 <script>
 import { store } from '../store'
+import CardMostViewed from './CardMostViewed.vue';
 export default {
     name: 'SectionMostViewed',
- 
+    components:{
+        CardMostViewed
+    },
     data() {
         return {
             store
@@ -29,19 +32,7 @@ export default {
                 </div>
                 <div class="col-8">
                     <div class="my-card d-flex justify-content-around my-5" >
-                        <div class="card"  v-for="date, index in store.MostViewed" :key="index">
-                            <div class="image">
-                                <img :src="date.img" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>{{ date.work }}</h5>
-                                <h3>{{ date.articol }}</h3>
-                                <div class="date-end d-flex justify-content-between mt-4">
-                                    <span><i class="fa-regular fa-calendar fa-2xs" style="color: #707070;"></i> {{ date.data }}</span>
-                                    <span><i class="fa-solid fa-eye fa-2xs" style="color: #737373;"></i> {{ date.views }}</span>
-                                </div>
-                            </div>
-                        </div>
+                        <CardMostViewed  v-for="date, index in store.MostViewed" :key="index" :date="date"/>
                     </div>
                 </div>
             </div>
@@ -82,30 +73,7 @@ export default {
         width: 100%;
         flex-wrap: nowrap;
         margin-left: 50px;
-        .card{
-            width: calc(100% / 2 - 10px);
-            border: none;
-            border-radius: 10px;
-            margin: 20px;
-            
-            img{
-                width: 100%;
-            }
-            .info{
-                padding: 30px;
-                h5{
-                    color: $violet_text;
-                    font-weight: 600;
-                }
-                h3{
-                    font-weight: 600;
-                }
-                span{
-                    font-size: 18px;
-                    color: $violet_text;
-                }
-            }
-        }
+        
     }
 }
     
