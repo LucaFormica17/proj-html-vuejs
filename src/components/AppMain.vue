@@ -27,8 +27,8 @@ export default {
     <main>
         <Jumbotron />
         <FeaturedOnlineCourses />
-        <SectionMostViewed />
         <AppCarousell />
+        <SectionMostViewed />
         <AppSubscribe />
     </main>
 </template>
