@@ -44,7 +44,7 @@ export const store = reactive({
    
     featuredCourses: [
         {
-            img: '',
+            img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/12/finance-course-thumbnail-04-480x298.jpg',
             price: 'Free',
             priceCents: '',
             title: 'Personal Finance: Financial Security Thinking & Principles',
@@ -52,7 +52,7 @@ export const store = reactive({
             students: 298,
         },
         {
-            img: 'course-02-480x298.jpg',
+            img: '/src/images/course-02-480x298.jpg',
             price: '$40',
             priceCents: '.00',
             title: 'Learning to Write as a Professional Author',
@@ -60,7 +60,7 @@ export const store = reactive({
             students: 77,
         },
         {
-            img: 'stock-full-hd-03-480x298.jpg',
+            img: '/src/images/stock-full-hd-03-480x298.jpg',
             price: 'Free',
             priceCents: '',
             title: 'Customer-centric Info-Tech Strategies',
@@ -68,7 +68,7 @@ export const store = reactive({
             students: 956,
         },
         {
-            img: 'stock-full-hd-04-480x298.jpg',
+            img: '/src/images/stock-full-hd-04-480x298.jpg',
             price: '$19',
             priceCents: '.00',
             title: 'Open Programming Courses for Everyone: Python',
@@ -76,7 +76,7 @@ export const store = reactive({
             students: 66,
         },
         {
-            img: 'stock-full-hd-06-480x298.jpg',
+            img: '/src/images/stock-full-hd-06-480x298.jpg',
             price: '$26',
             priceCents: '.00',
             title: 'Academic Listening and Note-taking',
@@ -84,7 +84,7 @@ export const store = reactive({
             students: 68,
         },
         {
-            img: 'course-featured-image-01-480x298.jpg',
+            img: '/src/images/course-featured-image-01-480x298.jpg',
             price: '$39',
             priceCents: '.00',
             title: 'Master jQuery in a Short Period of Time',
