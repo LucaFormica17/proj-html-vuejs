@@ -5,6 +5,8 @@ import SectionMostViewed from './SectionMostViewed.vue';
 import AppCarousell from './AppCarousell.vue';
 import FeaturedOnlineCourses from './FeaturedOnlineCourses.vue';
 import Video from './Video.vue';
+import AppSubscribe from './AppSubscribe.vue';
+
 
 export default {
     name: 'AppMain',
@@ -14,6 +16,7 @@ export default {
         AppCarousell,
         FeaturedOnlineCourses,
         Video,
+        AppSubscribe
 
     },
     data() {
@@ -30,6 +33,8 @@ export default {
         <SectionMostViewed />
         <Video />
         <AppCarousell />
+        <SectionMostViewed />
+        <AppSubscribe />
     </main>
 </template>
 <style lang="">
