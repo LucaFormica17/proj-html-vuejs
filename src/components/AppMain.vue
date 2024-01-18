@@ -6,6 +6,7 @@ import AppCarousell from './AppCarousell.vue';
 import FeaturedOnlineCourses from './FeaturedOnlineCourses.vue';
 import Video from './Video.vue';
 import AppSubscribe from './AppSubscribe.vue';
+import Counter from './Counter.vue';
 
 
 export default {
@@ -16,7 +17,8 @@ export default {
         AppCarousell,
         FeaturedOnlineCourses,
         Video,
-        AppSubscribe
+        AppSubscribe,
+        Counter,
 
     },
     data() {
@@ -35,6 +37,8 @@ export default {
         <AppCarousell />
         <SectionMostViewed />
         <AppSubscribe />
+        <Counter/>
+
     </main>
 </template>
 <style lang="">

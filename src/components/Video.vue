@@ -4,12 +4,13 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        <div class="container">
-            <div class="row my-5">
-                <div class="col-7 d-flex justify-content-end ">
+    <div class="bg-radial">
+        <div class="container py-5 ">
+            <div class="row ">
+                <div class="col-7 d-flex justify-content-end col-img">
                     <img class="video" src="../images/home-2-popup-video-poster.jpg" alt="">
                     <img class="youtube" src="../images/icon-youtube-play.png" alt="">
+                    <!-- <img class="moving-img" src="../images/maxcoach-shape-07-100x100.png" alt=""> -->
                 </div>
                 <div class="col-4 gradient">   
                     <h6 class="my-3">get started <b>effortlessly</b></h6>
@@ -22,15 +23,23 @@ export default {
             </div>
         </div>
     </div>
+    
 </template>
 <style lang="scss" scoped>
 @use "./styles/generals.scss" as *;
 @use "./styles/partials/variables" as *;
 
+.bg-radial {
+    background-image: radial-gradient(ellipse farthest-corner at -7% -16%, white 82%, #F5F7FA 44%);
+}
+
 .video {
     width: 500px;
-
+    z-index: 1;
 }
+
+
+
 
 .youtube {
     width: 80px;
