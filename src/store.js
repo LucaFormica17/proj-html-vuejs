@@ -91,6 +91,27 @@ export const store = reactive({
             lessons: 6,
             students: 51,
         }
+    ],
+
+    smartTutoring: [
+        {
+            img: '/src/images/home-2-image-box-01.png',
+            title: 'Customize Preferences',
+            description: 'Learners are given the right to arrange and customize their study schedule and timetable based on preferences.',
+            button: 'Start here',
+        },
+        {
+            img: '/src/images/about-us-02-image-box-02.png',
+            title: 'Cloud Storage',
+            description: 'You can store online lessons via online cloud or download to your device and revise lessons on the way.',
+            button: 'Get Free Quote',
+        },
+        {
+            img: '/src/images/home-2-image-box-03.png',
+            title: 'Multimedia Channels',
+            description: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.',
+            button: 'Start now',
+        },
     ]
 })
 
