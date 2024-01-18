@@ -4,14 +4,33 @@ export default {
     name: 'Jumbotron',
     data() {
         return {
-            store
+            store,
+            mouseX: 0,
+            mouseY: 0,
         }
+    },
+    computed: {
+        movingStyle() {
+            let translateX = (this.mouseX / 10);
+            let translateY = (this.mouseY / 10);
+
+            return {
+                transform: `translate(${translateX}px, ${translateY}px)`,
+                transition: 'transform 0.3s ease-out',
+            };
+        },
+    },
+    methods: {
+        mousePosition(event) {
+            this.mouseX = event.clientX;
+            this.mouseY = event.clientY;
+        },
     },
 
 }
 </script>
 <template lang="">
-    <div class="container">
+    <div class="container" @mousemove="mousePosition">
         <div class="row">
             <div class="col-6">
                 <div class="content p-5">
@@ -24,6 +43,11 @@ export default {
             <div class="col-6">
                 <div class="image">
                     <img class="profile" src="../images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
+                </div>
+                <div>
+                    <img class="moving-img-square" :style="movingStyle" src="../images/maxcoach-shape-07-100x100.png" alt="">
+                    <img class="moving-img-circle" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="">
+                    <img class="moving-img-sfera" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="">
                 </div>
             </div>
             <div class="col-12">
@@ -102,4 +126,26 @@ export default {
 .content-logo {
     margin-bottom: 50px;
 }
+.moving-img-square {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    bottom: 500px;
+    right: 200px;
+    z-index: -1;
+}
+
+.moving-img-circle {
+    position: absolute;
+    top: 250px;
+    left: 1250px;
+    z-index: 1;
+}
+.moving-img-sfera {
+    position: absolute;
+    top: 600px;
+    left: 700px;
+    z-index: 1;
+}
+
 </style>
