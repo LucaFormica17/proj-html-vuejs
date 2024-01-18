@@ -27,7 +27,7 @@ export default {
 </script>
 <template lang="">
     <div class="bg-radial " @mousemove="mousePosition">
-        <div class="container py-5 ">
+        <div class="container py-5 container-img">
             <div class="row ">
                 <div class="col-7 d-flex justify-content-end">
                     <div class="col-img">
@@ -80,18 +80,22 @@ export default {
 
 }
 
+.container-img {
+    position: relative;
+}
+
 
 .moving-img-square {
     width: 100px;
     height: 100px;
-    position: relative;
-    bottom: 30px;
-    right: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 610px;
 }
 
 .moving-img-cloud {
     position: absolute;
-    top: 2400px;
+    top: -70px;
     left: 50px;
 }
 
@@ -134,3 +138,4 @@ a {
     color: $main_green;
 }
 </style>
+
