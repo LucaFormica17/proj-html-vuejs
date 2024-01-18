@@ -92,14 +92,14 @@ export default {
                     <div class="row">
                         <h6 class="mb-3">Explore</h6>
                         <div class="col-6">
-                            <ul>
+                            <ul class="color-hover">
                                 <li v-for="ex, index in explore" :key="index">
                                     {{ex.label}}
                                 </li>
                             </ul>
                         </div>
                       <div class="col-6">
-                            <ul>
+                            <ul class="color-hover">
                                 <li v-for="ex2, index in explore2" :key="index">
                                     {{ex2.label}}
                                 </li>
@@ -109,7 +109,7 @@ export default {
                 </div>
                 <div class="col-3">
                     <h6 class="mb-3">Information</h6>
-                    <ul>
+                    <ul class="color-hover">
                         <li v-for="info, index in information" :key="index">
                             {{info.label}}
                         </li>
@@ -162,6 +162,12 @@ button {
     &:hover {
         color: $main_green;
         background-color: white;
+    }
+}
+
+.color-hover {
+    li:hover {
+        color: $main_green;
     }
 }
 </style>
