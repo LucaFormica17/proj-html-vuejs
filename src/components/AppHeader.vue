@@ -1,9 +1,10 @@
 <script>
+import {store} from '../store'
 export default {
     name: 'AppHeader',
     data() {
         return {
-            items: ['Home','Pages','Courses','Features','Blog','Shop']
+            store
         }
     },
 }
@@ -17,7 +18,7 @@ export default {
                         <img src="../images/dark-logo.png" alt="logo">
                         <div class="dinamic-container">
                             <ul class="d-flex">
-                                <li v-for="(item, index) in items" :key="index">
+                                <li v-for="(item, index) in store.items" :key="index">
                                     <div class="dropdown">
                                         <button class="btn border border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {{item}}
@@ -32,8 +33,8 @@ export default {
                                 <li class="mt-2"><i class="fa-regular fa-circle-user"></i></li>
                             </ul>
                             <div class="input-group ms-4">
-                                <input type="text" class="form-control border border-end-0 bg-light" placeholder="Search...">
-                                <button class="btn border border-start-0 bg-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass green-glass"></i></button>
+                                <input type="text" class="form-control border border-end-0 bg-l" placeholder="Search...">
+                                <button class="btn border border-start-0 bg-l" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass green-glass"></i></button>
                             </div>
                         </div>
                     </div>
@@ -54,6 +55,7 @@ export default {
 
         img{
             width: 15%;
+            cursor: pointer;
         }
 
         .dinamic-container{
@@ -61,8 +63,38 @@ export default {
             justify-content: space-between;
             align-items: center;
 
-            .green-glass{
-                color: $main_green;
+            li:hover{
+                border-bottom: 1px solid $main_green;
+                
+                button:hover{
+                    color: $main_green;
+                }
+
+                i:hover{
+                    color: $main_green;
+                }
+            }
+
+
+            .bg-l{
+                background-color: rgb(235, 234, 234);
+
+                &::placeholder{
+                    color: rgb(185, 185, 185);
+                }
+
+                .green-glass{
+                    color: $main_green;
+
+
+                }
+            }
+            button.bg-l:hover{
+                background-color: $main_green;
+
+                .green-glass{
+                    color: white;
+                }
             }
         }
     }

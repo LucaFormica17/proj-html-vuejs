@@ -57,6 +57,10 @@ export default {
             color: white;
             font-size: 8px;
             font-weight: 600;
+
+            &:hover{
+                background-color: $main_violet;
+            }
         }
 
         img{

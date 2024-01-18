@@ -21,7 +21,7 @@ export default {
                 </div>
                 <div class="col-12">
                     <div class="swiper-container">
-                        <div class="swiper-card" v-for="(slide, index) in store.carousell">
+                        <div class="swiper-card" v-for="(slide, index) in store.carousell" :class="index == 1 ? 'active' : ''">
                             <p class="mb-3">{{slide.title}}</p>
                             <span>{{slide.paragraph}}</span>
                             <div class="profile">
@@ -105,6 +105,11 @@ export default {
                 width: calc(100% / 3 - 80px);
                 margin: 0 40px;
                 padding: 30px;
+                opacity: 0.5;
+
+                &.active{
+                    opacity: 1;
+                }
 
                 p{
                     color: $main_violet;
@@ -182,6 +187,10 @@ export default {
             color: white;
             font-weight: 600;
             padding: 10px 70px;
+
+            &:hover{
+                background-color: $main_violet;
+            }
         }
     }
     

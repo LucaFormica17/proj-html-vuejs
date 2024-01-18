@@ -17,7 +17,7 @@ export default {
                 <div class="content p-5">
                     <h1>Distant learning for futher expansion</h1>
                     <p>Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.</p>
-                    <button class="btn btn-success my-3 py-3 px-5"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Download free guide</button>
+                    <button class="btn my-3 py-3 px-5"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Download free guide</button>
                     <span class="py-2"><a class="link" href="#">Have question?</a> <a href="#">Get Fre Sample <i class="fa-solid fa-arrow-right" style="color: #20ad96;"></i></a></span>
                 </div>
             </div>
@@ -56,6 +56,8 @@ export default {
     }
     button{
         font-weight: bold;
+        background-color: $main_green;
+        color: white;
     }
     button:hover{
         background-color: #3F3A64;
