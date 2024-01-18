@@ -21,9 +21,9 @@
         <h6 class="my-2">
             Stimulated to learn?
         </h6>
-        <h1 class="my-2">
+        <h2 class="my-2">
             Featured Online Courses
-        </h1>
+        </h2>
 
         <div class="row">
             <CourseCard v-for="course, index in store.featuredCourses" :key="index" :course="course"/>
@@ -38,26 +38,28 @@
 
 <style lang="scss" scoped>
 @use './styles/partials/variables' as *;
+@use './styles/partials/mixin' as *;
 
 .background{
     background-color: #F5F7FA;
     .container{
         h6{
-            color: $dark_text;
-            text-align: center;
-            text-transform: uppercase;
-            font-kerning: normal;
+            @include teaser-title;
         }
 
-        h1{
-            text-align: center;
-            font-weight: bold;
+        h2{
+            @include important-title;
         }
 
         .view-button{
             background-color: $main_green;
             color: white;
             padding: 1rem 3rem;
+
+            &:hover{
+                background-color: $main_violet;
+                transition: 0.25s;
+            }
         }
     }
 }

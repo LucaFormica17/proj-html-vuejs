@@ -4,6 +4,7 @@ import Jumbotron from './Jumbotron.vue';
 import SectionMostViewed from './SectionMostViewed.vue';
 import AppCarousell from './AppCarousell.vue';
 import FeaturedOnlineCourses from './FeaturedOnlineCourses.vue';
+import SmartTutoring from './SmartTutoring.vue';
 import Video from './Video.vue';
 import AppSubscribe from './AppSubscribe.vue';
 import Counter from './Counter.vue';
@@ -16,9 +17,11 @@ export default {
         SectionMostViewed,
         AppCarousell,
         FeaturedOnlineCourses,
+        SmartTutoring,
         Video,
         AppSubscribe,
         Counter,
+
 
     },
     data() {
@@ -28,19 +31,21 @@ export default {
     },
 }
 </script>
-<template lang="">
+
+<template>
     <main>
         <Jumbotron />
         <FeaturedOnlineCourses />
-        <SectionMostViewed />
+        <SmartTutoring />
         <Video />
         <AppCarousell />
         <SectionMostViewed />
         <AppSubscribe />
         <Counter/>
 
+
     </main>
 </template>
+
 <style lang="">
-    
 </style>
