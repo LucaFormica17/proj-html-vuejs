@@ -26,7 +26,11 @@
                 <img :src="`${option.img}`" class="py-3">
                 <h4>{{ option.title }}</h4>
                 <div class="option-description pb-4">{{ option.description }}</div>
-                <span class="option-button">{{ option.button }} &#10140;</span>
+                <span class="option-button">
+                    <div class="menu-text">
+                        {{ option.button }} &#10140;
+                    </div>
+                </span>
             </div>
         </div>
     </div>
@@ -41,15 +45,24 @@
     width: calc(100% / 3 - 3rem);
     margin: 1rem;
 
+    .menu-text:after {
+        transition: all ease-in-out .2s;
+        background: none repeat scroll 0 0 rgb(193, 202, 206);
+        display: block;
+        height: 1px;
+        width: 0;
+        content: "";
+    }
+
     &:hover{
         cursor: pointer;
+
+        .menu-text:after{
+            width: 100%;
+        }
         
         .option-button{
             color: $main_green;
-            border-bottom: 1px solid gray;
-            transition-property: border;
-            transition-delay: 0.2s;
-            transition-duration: 1s;
         }
     }
 }
