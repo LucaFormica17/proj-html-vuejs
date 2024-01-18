@@ -39,11 +39,9 @@ export default {
         <SmartTutoring />
         <Video />
         <AppCarousell />
+        <Counter/>
         <SectionMostViewed />
         <AppSubscribe />
-        <Counter/>
-
-
     </main>
 </template>
 
