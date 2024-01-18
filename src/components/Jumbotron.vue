@@ -129,9 +129,9 @@ export default {
 .moving-img-square {
     width: 300px;
     height: 300px;
-    position: relative;
-    bottom: 500px;
-    right: 200px;
+    position: absolute;
+    bottom: 300px;
+    right: 600px;
     z-index: -1;
 }
 
