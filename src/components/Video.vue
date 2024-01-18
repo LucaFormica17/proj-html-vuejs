@@ -26,7 +26,7 @@ export default {
     
 </template>
 <style lang="scss" scoped>
-@use "./styles/generals.scss" as *;
+@use "./styles/generals.scss";
 @use "./styles/partials/variables" as *;
 
 .bg-radial {
