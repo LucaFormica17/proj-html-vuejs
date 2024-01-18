@@ -2,6 +2,7 @@
 import { store } from '../store'
 export default {
     name: 'SectionMostViewed',
+ 
     data() {
         return {
             store
@@ -28,14 +29,14 @@ export default {
                 </div>
                 <div class="col-8">
                     <div class="my-card d-flex justify-content-around my-5" >
-                        <div class="card" v-for="date, index in store.MostViewed" :key="index">
+                        <div class="card"  v-for="date, index in store.MostViewed" :key="index">
                             <div class="image">
                                 <img :src="date.img" alt="">
                             </div>
                             <div class="info">
                                 <h5>{{ date.work }}</h5>
                                 <h3>{{ date.articol }}</h3>
-                                <div class="info-end d-flex justify-content-between mt-4">
+                                <div class="date-end d-flex justify-content-between mt-4">
                                     <span><i class="fa-regular fa-calendar fa-2xs" style="color: #707070;"></i> {{ date.data }}</span>
                                     <span><i class="fa-solid fa-eye fa-2xs" style="color: #737373;"></i> {{ date.views }}</span>
                                 </div>
