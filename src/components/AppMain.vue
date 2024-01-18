@@ -1,5 +1,4 @@
 <script>
-
 import { store } from '../store.js'
 import Jumbotron from './Jumbotron.vue';
 import SectionMostViewed from './SectionMostViewed.vue';
