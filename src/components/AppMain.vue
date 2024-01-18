@@ -4,6 +4,7 @@ import { store } from '../store.js'
 import Jumbotron from './Jumbotron.vue';
 import SectionMostViewed from './SectionMostViewed.vue';
 import AppCarousell from './AppCarousell.vue';
+import FeaturedOnlineCourses from './FeaturedOnlineCourses.vue';
 
 export default {
     name: 'AppMain',
@@ -11,6 +12,7 @@ export default {
         Jumbotron,
         SectionMostViewed,
         AppCarousell,
+        FeaturedOnlineCourses,
     },
     data() {
         return {
@@ -22,6 +24,7 @@ export default {
 <template lang="">
     <main>
         <Jumbotron />
+        <FeaturedOnlineCourses />
         <SectionMostViewed />
         <AppCarousell />
     </main>

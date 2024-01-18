@@ -1,7 +1,6 @@
 import{ reactive } from 'vue';
 export const store = reactive({
 
-
     MostViewed:[
         {
             img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/12/home-personal-finance-blog-03-480x352.jpg',
@@ -41,8 +40,57 @@ export const store = reactive({
             name: 'MADLEY PONDOR',
             role: '/IT specialist'
         },
-    ]
+    ],
    
-
+    featuredCourses: [
+        {
+            img: '',
+            price: 'Free',
+            priceCents: '',
+            title: 'Personal Finance: Financial Security Thinking & Principles',
+            lessons: 2,
+            students: 298,
+        },
+        {
+            img: 'course-02-480x298.jpg',
+            price: '$40',
+            priceCents: '.00',
+            title: 'Learning to Write as a Professional Author',
+            lessons: 20,
+            students: 77,
+        },
+        {
+            img: 'stock-full-hd-03-480x298.jpg',
+            price: 'Free',
+            priceCents: '',
+            title: 'Customer-centric Info-Tech Strategies',
+            lessons: 24,
+            students: 956,
+        },
+        {
+            img: 'stock-full-hd-04-480x298.jpg',
+            price: '$19',
+            priceCents: '.00',
+            title: 'Open Programming Courses for Everyone: Python',
+            lessons: 17,
+            students: 66,
+        },
+        {
+            img: 'stock-full-hd-06-480x298.jpg',
+            price: '$26',
+            priceCents: '.00',
+            title: 'Academic Listening and Note-taking',
+            lessons: 14,
+            students: 68,
+        },
+        {
+            img: 'course-featured-image-01-480x298.jpg',
+            price: '$39',
+            priceCents: '.00',
+            title: 'Master jQuery in a Short Period of Time',
+            lessons: 6,
+            students: 51,
+        }
+    ]
 })
 
