@@ -5,6 +5,7 @@ import SectionMostViewed from './SectionMostViewed.vue';
 import AppCarousell from './AppCarousell.vue';
 import FeaturedOnlineCourses from './FeaturedOnlineCourses.vue';
 import Video from './Video.vue';
+import Counter from './Counter.vue';
 
 export default {
     name: 'AppMain',
@@ -14,6 +15,7 @@ export default {
         AppCarousell,
         FeaturedOnlineCourses,
         Video,
+        Counter,
 
     },
     data() {
@@ -28,8 +30,9 @@ export default {
         <Jumbotron />
         <FeaturedOnlineCourses />
         <SectionMostViewed />
-        <Video />
+        <Video/>
         <AppCarousell />
+        <Counter/>
     </main>
 </template>
 <style lang="">

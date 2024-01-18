@@ -4,9 +4,9 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        <div class="container">
-            <div class="row my-5">
+    <div class="bg-radial">
+        <div class="container py-5 ">
+            <div class="row ">
                 <div class="col-7 d-flex justify-content-end ">
                     <img class="video" src="../images/home-2-popup-video-poster.jpg" alt="">
                     <img class="youtube" src="../images/icon-youtube-play.png" alt="">
@@ -22,6 +22,7 @@ export default {
             </div>
         </div>
     </div>
+    
 </template>
 <style lang="scss" scoped>
 @use "./styles/generals.scss" as *;
@@ -31,6 +32,11 @@ export default {
     width: 500px;
 
 }
+
+.bg-radial {
+    background-image: radial-gradient(ellipse farthest-corner at -7% -16%, white 82%, #F5F7FA 44%);
+}
+
 
 .youtube {
     width: 80px;
