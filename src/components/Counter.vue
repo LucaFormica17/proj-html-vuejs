@@ -30,7 +30,7 @@ export default {
 </script>
 <template lang="">
     
-    <div class="container">
+    <div class="container moving-background">
         <div class="row">
             <div class="bordi col-3 d-flex flex-column align-items-center " v-for="count, index in counter">
                 <h4 class="my-3 text-center " >{{count.string}}</h4>
