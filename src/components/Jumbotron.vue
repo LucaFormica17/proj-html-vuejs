@@ -57,6 +57,9 @@ export default {
     button{
         font-weight: bold;
     }
+    button:hover{
+        background-color: #3F3A64;
+    }
     span{
         display: block;
         font-size: 18px;
@@ -71,12 +74,15 @@ export default {
 .profile{
     border-radius: 50%;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 .logo{
     margin-top: 50px;
     opacity: 0.5;
     height: 100%;    
+}
+.content-logo{
+    margin-bottom: 50px;
 }
 
 
