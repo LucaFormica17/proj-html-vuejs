@@ -34,9 +34,18 @@ export default {
     border: none;
     border-radius: 10px;
     margin: 20px;
-    
-    img{
-        width: 100%;
+    .image{
+        max-width: 100%;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            transition: transform 1.5s ease;
+            
+        }
+        &:hover img{
+            transform: scale(1.1);
+        }
     }
     .info{
         padding: 30px;

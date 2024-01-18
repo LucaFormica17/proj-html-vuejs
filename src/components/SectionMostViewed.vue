@@ -51,7 +51,7 @@ export default {
     }
     .text{
         font-size: 35px;
-        font-weight: 600;
+        font-weight: bold;
     }
     .text-end{
         font-weight: 400;
@@ -67,6 +67,9 @@ export default {
             .fa-solid{
                 margin-right: 20px;
             }
+        }
+        li:hover{
+            color: $main_green;
         }
     }
     .my-card{

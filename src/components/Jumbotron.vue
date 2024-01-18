@@ -18,7 +18,7 @@ export default {
                     <h1>Distant learning for futher expansion</h1>
                     <p>Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.</p>
                     <button class="btn btn-success my-3 py-3 px-5"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Download free guide</button>
-                    <span class="py-2">Have question? <a href="#">Get Fre Sample <i class="fa-solid fa-arrow-right" style="color: #20ad96;"></i></a></span>
+                    <span class="py-2"><a class="link" href="#">Have question?</a> <a href="#">Get Fre Sample <i class="fa-solid fa-arrow-right" style="color: #20ad96;"></i></a></span>
                 </div>
             </div>
             <div class="col-6">
@@ -64,6 +64,9 @@ export default {
         display: block;
         font-size: 18px;
         color: $violet_text;
+        .link{
+            color:$violet_text;
+        }
         a{
             color: $main_green;
             text-decoration: none;
@@ -80,6 +83,9 @@ export default {
     margin-top: 50px;
     opacity: 0.5;
     height: 100%;    
+}
+.logo:hover{
+    opacity: 1;
 }
 .content-logo{
     margin-bottom: 50px;
