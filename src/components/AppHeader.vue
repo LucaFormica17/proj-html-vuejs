@@ -19,13 +19,34 @@ export default {
                             <img src="../images/dark-logo.png" alt="logo">
                             <div class="dinamic-container">
                                 <ul class="d-flex">
+                                    <li>
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Home</button>
+
+                                        <div class="offcanvas offcanvas-top m-header" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                            <div class="offcanvas-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body d-flex justify-content-between">
+                                                <div class="ul-container">
+                                                    <ul>
+                                                        <li class="p-4" v-for="(submenu, index) in store.offcanvasMenu" :key="index">
+                                                            {{submenu}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="img-off-container">
+                                                    <img class="off-img" src="../images/homepages-mega-menu-image-alt.jpg" alt="off-img"> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li v-for="(item, index) in store.items" :key="index">
                                         <div class="dropdown">
                                             <button class="btn border border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {{item}}
                                             </button>
                                             <ul class="dropdown-menu w">
-                                                <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
+                                                <li class="p-1" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
                                                     {{submenu}}
                                                 </li>
                                             </ul>
@@ -54,6 +75,8 @@ export default {
     max-height: 500px;
     overflow: scroll;
 }
+
+
 
 
 .fixed-container{
@@ -86,8 +109,6 @@ export default {
         align-items: center;
 
 
-        
-
         img{
             width: 15%;
             cursor: pointer;
@@ -102,6 +123,27 @@ export default {
             i:hover {
                 color: $main_green;
             }
+
+            .offcanvas.offcanvas-top.m-header{
+            max-width: 1320px;
+            margin: 80px auto;
+            height: 500px;
+
+            .ul-container{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+            }
+
+            .img-off-container{
+
+                .off-img{
+                    width: 100%;
+                }
+            }
+}
 
         }
 

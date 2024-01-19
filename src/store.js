@@ -1,12 +1,13 @@
 import{ reactive } from 'vue';
 export const store = reactive({
 
-    items: ['Home','Pages','Courses','Features','Blog','Shop'],
+    items: ['Pages','Courses','Features','Blog','Shop'],
+
+    offcanvasMenu: [
+        'MaxCoach Education', 'Course, Portal', 'Distant, Learning', 'Multimedia, Pedagogy', 'Modern', 'Schooling, Remote', 'Training, Health Coaching', 'Gym Coaching', 'Business, Artist', 'Kitchen Coach', 'Motivation', 'Dancing', 'Guitar', 'Yoga', 'Photography', 'Personal Finance', 'Sales Coaching','Mental Therapy'
+    ],
 
     MenuList:[
-        [
-            'MaxCoach Education', 'Course, Portal', 'Distant, Learning', 'Multimedia, Pedagogy', 'Modern', 'Schooling, Remote', 'Training, Health Coaching', 'Gym Coaching', 'Business, Artist', 'Kitchen Coach', 'Motivation', 'Dancing', 'Guitar', 'Yoga', 'Photography', 'Personal Finance', 'Sales Coaching','Mental Therapy'
-        ],
 
         [ 'Start Here', 'Success Story', 'About me', 'About us 01', 'About us 02', 'About us 03', 'Contact me', 'Contact us', 'Purchase Guide', 'Privacy Policy', 'Terms of Service'
         ],
