@@ -35,7 +35,7 @@ export default {
                                                     </ul>
                                                 </div>
                                                 <div class="img-off-container">
-                                                    <img class="off-img" src="../images/homepages-mega-menu-image-alt.jpg" alt="off-img">
+                                                    <img class="off-img" src="../images/homepages-mega-menu-image-alt.jpg" alt="off-img"> 
                                                 </div>
                                             </div>
                                         </div>
