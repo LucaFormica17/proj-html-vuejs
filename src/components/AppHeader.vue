@@ -78,6 +78,9 @@ export default {
         width: 15%;
         cursor: pointer;
     }
+    li:hover{
+        color: $main_green
+    }
 
     .dinamic-container {
 
