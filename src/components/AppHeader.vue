@@ -157,9 +157,9 @@ export default {
                 }
 
 
+            }
+
         }
-
-
         .bg-l {
             background-color: rgb(235, 234, 234);
 
@@ -181,7 +181,7 @@ export default {
                 color: white;
             }
         }
+        
     }
-}
 }
 </style>
