@@ -29,7 +29,7 @@ export default {
                                             <div class="offcanvas-body d-flex justify-content-between">
                                                 <div class="ul-container">
                                                     <ul>
-                                                        <li class="p-4" v-for="(submenu, index) in store.offcanvasMenu" :key="index">
+                                                        <li class="p-2 me-5" v-for="(submenu, index) in store.offcanvasMenu" :key="index">
                                                             {{submenu}}
                                                         </li>
                                                     </ul>
@@ -46,7 +46,7 @@ export default {
                                                 {{item}}
                                             </button>
                                             <ul class="dropdown-menu w">
-                                                <li class="p-1" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
+                                                <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
                                                     {{submenu}}
                                                 </li>
                                             </ul>
@@ -112,16 +112,20 @@ export default {
         img{
             width: 15%;
             cursor: pointer;
+        }
+        li{
 
-        li:hover {
-            border-bottom: 1px solid $main_green;
+            &:hover{
 
-            button:hover {
-                color: $main_green;
-            }
-
-            i:hover {
-                color: $main_green;
+                border-bottom: 1px solid $main_green;
+    
+                button:hover {
+                    color: $main_green;
+                }
+    
+                i:hover {
+                    color: $main_green;
+                }
             }
 
             .offcanvas.offcanvas-top.m-header{
@@ -129,21 +133,29 @@ export default {
             margin: 80px auto;
             height: 500px;
 
-            .ul-container{
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                }
-            }
 
-            .img-off-container{
+                .offcanvas-body{
+                    overflow-y: unset;
+                    .ul-container{
+                        height: 100%;
 
-                .off-img{
-                    width: 100%;
+                        ul{
+                            columns: 2 auto;
+    
+                            li:hover{
+                                border: none;
+                            }
+                        }
+                    }
+    
+                    .img-off-container{
+    
+                        .off-img{
+                            width: 100%;
+                        }
+                    }
                 }
-            }
-}
+
 
         }
 
