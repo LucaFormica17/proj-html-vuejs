@@ -1,5 +1,5 @@
 <script>
-import {store} from '../store'
+import { store } from '../store'
 export default {
     name: 'AppHeader',
     data() {
@@ -24,7 +24,7 @@ export default {
                                             {{item}}
                                         </button>
                                         <ul class="dropdown-menu w">
-                                            <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
+                                            <li class="py-2 ps-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
                                                 {{submenu}}
                                             </li>
                                         </ul>
@@ -46,59 +46,67 @@ export default {
 <style lang="scss" scoped>
 @use './styles/generals.scss';
 @use './styles/partials/variables' as*;
-.w{
+
+.w {
     width: 250px;
+    max-height: 500px;
+    overflow: scroll;
+    border: none;
+    border-bottom: 4px solid $main_green;
+    border-radius: 0%;
 }
-    .navbar-container{
-        margin: 20px 0;
+
+
+.navbar-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 15%;
+        cursor: pointer;
+    }
+
+    .dinamic-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        img{
-            width: 15%;
-            cursor: pointer;
+        li:hover {
+            border-bottom: 1px solid $main_green;
+
+            button:hover {
+                color: $main_green;
+            }
+
+            i:hover {
+                color: $main_green;
+            }
         }
 
-        .dinamic-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
 
-            li:hover{
-                border-bottom: 1px solid $main_green;
-                
-                button:hover{
-                    color: $main_green;
-                }
+        .bg-l {
+            background-color: rgb(235, 234, 234);
 
-                i:hover{
-                    color: $main_green;
-                }
+            &::placeholder {
+                color: rgb(185, 185, 185);
             }
 
-
-            .bg-l{
-                background-color: rgb(235, 234, 234);
-
-                &::placeholder{
-                    color: rgb(185, 185, 185);
-                }
-
-                .green-glass{
-                    color: $main_green;
+            .green-glass {
+                color: $main_green;
 
 
-                }
             }
-            button.bg-l:hover{
-                background-color: $main_green;
+        }
 
-                .green-glass{
-                    color: white;
-                }
+        button.bg-l:hover {
+            background-color: $main_green;
+
+            .green-glass {
+                color: white;
             }
         }
     }
-
+}
 </style>

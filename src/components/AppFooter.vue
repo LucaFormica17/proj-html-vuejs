@@ -67,6 +67,12 @@ export default {
 
         }
     },
+    methods: {
+        // funzione richiamata sul button, per tornare all'inizio della pagina
+        scrollStart() {
+            window.scrollTo(0, 0);
+        }
+    },
 }
 </script>
 <template lang="">
@@ -120,7 +126,7 @@ export default {
         <div class="text-center mt-4">
             <span class="scritta-piccola">&copy;2020 Maxcoach. All Rights Reserved</span>
         </div>
-        <button type="button" class="btn">&uarr;</button>
+        <button type="button" class="btn" @click="scrollStart">&uarr;</button>
     </footer>
 </template>
 <style lang="scss" scoped>
