@@ -3,6 +3,27 @@ export const store = reactive({
 
     items: ['Home','Pages','Courses','Features','Blog','Shop'],
 
+    MenuList:[
+        [
+            'MaxCoach Education', 'Course, Portal', 'Distant, Learning', 'Multimedia, Pedagogy', 'Modern', 'Schooling, Remote', 'Training, Health Coaching', 'Gym Coaching', 'Business, Artist', 'Kitchen Coach', 'Motivation', 'Dancing', 'Guitar', 'Yoga', 'Photography', 'Personal Finance', 'Sales Coaching','Mental Therapy'
+        ],
+
+        [ 'Start Here', 'Success Story', 'About me', 'About us 01', 'About us 02', 'About us 03', 'Contact me', 'Contact us', 'Purchase Guide', 'Privacy Policy', 'Terms of Service'
+        ],
+
+        [ 'Courses Grid 01', 'Courses Grid 02', 'Courses Grid 03', 'Membership Levels', 'Become a Teacher', 'Profile', 'Checkout', 'Single Layout'
+        ],
+
+        [ 'Events', 'Zoom Meetings'
+        ],
+
+        [ 'Blog Grid', 'Blog Masonry', 'Blog Classic', 'Blog List'
+        ],
+        
+        [ 'Shop Left Sidebar', 'Shop Right Sidebar', 'Cart', 'Wishlist', 'Single Product'
+        ]
+    ],
+
     MostViewed:[
         {
             img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/12/home-personal-finance-blog-03-480x352.jpg',
