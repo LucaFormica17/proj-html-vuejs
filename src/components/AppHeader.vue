@@ -53,9 +53,6 @@ export default {
     width: 250px;
     max-height: 500px;
     overflow: scroll;
-    border: none;
-    border-bottom: 4px solid $main_green;
-    border-radius: 0%;
 }
 
 
