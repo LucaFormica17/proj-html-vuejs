@@ -4,28 +4,36 @@ import { store } from '../store.js'
 export default {
     data() {
         return {
-            store,
-            mouseX: 0,
-            mouseY: 0,
+
+            active: 0,
+            store
         }
     },
-    computed: {
-        movingStyle() {
-            let translateX = (this.mouseX / 10);
-            let translateY = (this.mouseY / 10);
-
-            return {
-                transform: `translate(${translateX}px, ${translateY}px)`,
-                transition: 'transform 0.3s ease-out',
-            };
-        },
-    },
     methods: {
-        mousePosition(event) {
-            this.mouseX = event.clientX;
-            this.mouseY = event.clientY;
+        activeCount(n){
+            if(n == 3){
+                return [3, 0, 1];
+            }
+            if(n == 2){
+                return [2, 3, 0];
+            }
+            if(n == 1){
+                return [1, 2, 3];
+            }
+            if(n == 0){
+                return [0, 1, 2];
+            }
         },
-    },
+        anotherCount(n){
+            if(n == 4){
+                return 0;
+            }
+            else{
+                return n;
+            }
+        }
+    }
+
 }
 </script>
 <template lang="">
@@ -40,23 +48,20 @@ export default {
                 </div>
                 <div class="col-12">
                     <div class="swiper-container">
-                        <div class="swiper-card" v-for="(slide, index) in store.carousell" :class="index == 1 ? 'active' : ''">
-                            <p class="mb-3">{{slide.title}}</p>
-                            <span>{{slide.paragraph}}</span>
+                        <div class="swiper-card" v-for="(slide, index) in activeCount(active)" :class="slide == anotherCount(active+1) ? 'active' : ''">
+                            <p class="mb-3">{{store.carousell[slide].title}}</p>
+                            <span>{{store.carousell[slide].paragraph}}</span>
                             <div class="profile">
-                                <img :src="slide.img" :alt="slide.name">
+                                <img :src="store.carousell[slide].img" :alt="store.carousell[slide].name">
                                 <div class="profile-text">
-                                    <p>{{slide.name}}</p>
-                                    <span>{{slide.role}}</span>
+                                    <p>{{store.carousell[slide].name}}</p>
+                                    <span>{{store.carousell[slide].role}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="btn-container">
-                        <div class="rounded-btn active"></div>
-                        <div class="rounded-btn"></div>
-                        <div class="rounded-btn"></div>
-                        <div class="rounded-btn"></div>
+                        <div v-for="index in 4" :key="index" class="rounded-btn" :class="index-1 == active ? 'active' : ''" @click="active = index-1"></div>
                     </div>
                 </div>
                 <div class="col-12">

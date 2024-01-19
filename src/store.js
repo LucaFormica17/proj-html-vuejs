@@ -43,25 +43,32 @@ export const store = reactive({
 
     carousell: [
         {
-            img: '/src/images/testimonial-avata-02.jpg',
-            title: 'High level of efficency and scientific teaching methods',
-            paragraph: 'I am free to learn at my own peace, follow my own schedule and choose rhe subject I want to learn from the syllablus. Great study portal for people like me.',
-            name: 'MINA HOLLACE',
-            role: '/Freelancer'
-        },
-        {
             img: '/src/images/testimonial-avata-03.jpg',
             title: "It's a choice of quality for people with special needs",
-            paragraph: "I'm a very strict person so I required everything to be organized and neat. Then, i'll be able to make things right and shine. MaxCoach guys just got me",
+            paragraph: "I'm a very strict person so I required everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
             name: 'FLORENCE THEMES',
             role: '/Multimedia Admin'
         },
         {
+            img: '/src/images/testimonial-avata-02.jpg',
+            title: 'High level of efficency and scientific teaching methods',
+            paragraph: 'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllablus. Great study portal for people like me.',
+            name: 'MINA HOLLACE',
+            role: '/Freelancer'
+        },
+        {
             img: '/src/images/testimonial-avata-04.jpg',
-            title: "Proffesional team of specialist and passionate mentors at reach",
-            paragraph: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students",
+            title: "Professional team of specialist and passionate mentors at reach",
+            paragraph: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.",
             name: 'MADLEY PONDOR',
             role: '/IT specialist'
+        },
+        {
+            img: '/src/images/testimonial-avata-01.jpg',
+            title: "The MaxCoach team works really hard to ensure high quality.",
+            paragraph: "I am happy with their arrangements of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels.",
+            name: 'LUVIC DUBBLE',
+            role: '/Private Tutor'
         },
     ],
    
