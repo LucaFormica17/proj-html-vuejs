@@ -3,6 +3,7 @@ export default {
     name: 'AppFooter',
     data() {
         return {
+            showBtn: false,
             addresses: [
                 {
                     label: "382 NE 191st St # 87394 Miami, FL 33179-3899",
@@ -73,6 +74,20 @@ export default {
             window.scrollTo(0, 0);
         }
     },
+    created(){
+        var scrollBefore = 0;
+        window.onscroll = ()=>{
+            const scrolled = window.scrollY;
+
+            if(scrollBefore > scrolled){
+                this.showBtn = true;
+                scrollBefore = scrolled;
+            }else{
+                scrollBefore = scrolled;
+                this.showBtn = false;
+            }
+        }
+    }
 }
 </script>
 <template lang="">
@@ -126,7 +141,7 @@ export default {
         <div class="text-center mt-4">
             <span class="scritta-piccola">&copy;2020 Maxcoach. All Rights Reserved</span>
         </div>
-        <button type="button" class="btn" @click="scrollStart">&uarr;</button>
+        <button type="button" class="btn" @click="scrollStart" v-show="showBtn">&uarr;</button>
     </footer>
 </template>
 <style lang="scss" scoped>
@@ -160,10 +175,11 @@ button {
     background-color: $main_green;
     color: white;
     border-radius: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     right: 40px;
     box-shadow: 2px 2px 2px #dedede;
+    z-index: 1;
 
     &:hover {
         color: $main_green;

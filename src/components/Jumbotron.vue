@@ -34,11 +34,11 @@ export default {
         <div class="row">
             <div class="col-6">
                 <div class="content p-5">
-                    <h1>Distant learning for futher expansion</h1>
+                    <h1>Distant learning for further expansion</h1>
                     <p>Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.</p>
                     <button class="btn my-3 py-3 px-5"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Download free guide</button>
                     <div class="menu-text">
-                        <span class="py-2 text"><a class="link" href="#">Have question?</a> <a href="#">Get Fre Sample <i class="fa-solid fa-arrow-right" style="color: #20ad96;"></i></a></span>
+                        <span class="py-2 text"><a class="link" href="#">Have questions?</a>    <a href="#">Get Free Sample <i class="fa-solid fa-arrow-right" style="color: #20ad96;"></i></a></span>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ export default {
 
     span {
         display: block;
-        font-size: 18px;
+        font-size: 17px;
         color: $violet_text;
 
         .link {
