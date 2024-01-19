@@ -41,6 +41,7 @@ export default {
                     </div>
                     <img class="moving-img-square" :style="movingStyle" src="../images/maxcoach-shape-07-100x100.png" alt="">
                     <img class="moving-img-circle" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="pattern">
+                    <div class="circle" :style="movingStyle"></div>
                 </div>
             </div>
         </div>
@@ -92,15 +93,26 @@ export default {
             width: 7%;
             position: absolute;
             bottom: 50%;
-            right: 28% ;
+            right: 22% ;
             opacity: 0.5;
         }
         .moving-img-circle{
             width: 7%;
             position: absolute;
             bottom: 50%;
-            right: 25%;
+            right: 20%;
             z-index: 1;
+        }
+        .circle{
+            position: absolute;
+            bottom: 50%;
+            left: 15%;
+            height: 25%;
+            width: 5%;
+            color: $main_green;
+            border-radius: 50%;
+            border: 10px solid currentColor;
+            opacity: 0.5;
         }
     }
     

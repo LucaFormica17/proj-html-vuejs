@@ -49,7 +49,7 @@ export default {
                 <div>
                     <img class="moving-img-square" :style="movingStyle" src="../images/maxcoach-shape-07-100x100.png" alt="">
                     <img class="moving-img-circle" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="">
-                    <img class="moving-img-sfera" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="">
+                    <div class="circle" :style="movingStyle"></div>
                 </div>
             </div>
             <div class="col-12">
@@ -167,10 +167,15 @@ export default {
     left: 1250px;
     z-index: 1;
 }
-.moving-img-sfera {
+.circle{
     position: absolute;
     top: 600px;
     left: 700px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 10px solid rgb(240, 175, 56);
+    opacity: 0.5;
     z-index: 1;
 }
 
