@@ -11,30 +11,32 @@ export default {
 </script>
 <template lang="">
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="navbar-container">
-                        <img src="../images/dark-logo.png" alt="logo">
-                        <div class="dinamic-container">
-                            <ul class="d-flex">
-                                <li v-for="(item, index) in store.items" :key="index">
-                                    <div class="dropdown">
-                                        <button class="btn border border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {{item}}
-                                        </button>
-                                        <ul class="dropdown-menu w">
-                                            <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
-                                                {{submenu}}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="mt-2"><i class="fa-regular fa-circle-user"></i></li>
-                            </ul>
-                            <div class="input-group ms-4">
-                                <input type="text" class="form-control border border-end-0 bg-l" placeholder="Search...">
-                                <button class="btn border border-start-0 bg-l" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass green-glass"></i></button>
+        <div class="fixed-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbar-container">
+                            <img src="../images/dark-logo.png" alt="logo">
+                            <div class="dinamic-container">
+                                <ul class="d-flex">
+                                    <li v-for="(item, index) in store.items" :key="index">
+                                        <div class="dropdown">
+                                            <button class="btn border border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                {{item}}
+                                            </button>
+                                            <ul class="dropdown-menu w">
+                                                <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
+                                                    {{submenu}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mt-2"><i class="fa-regular fa-circle-user"></i></li>
+                                </ul>
+                                <div class="input-group ms-4">
+                                    <input type="text" class="form-control border border-end-0 bg-l" placeholder="Search...">
+                                    <button class="btn border border-start-0 bg-l" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass green-glass"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -49,11 +51,22 @@ export default {
 .w{
     width: 250px;
 }
+
+.fixed-container{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 3px rgb(230, 229, 229);
+}
     .navbar-container{
+        
         margin: 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        
 
         img{
             width: 15%;
