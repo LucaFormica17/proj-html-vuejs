@@ -23,10 +23,10 @@ export default {
                                         <button class="btn border border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {{item}}
                                         </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"></a></li>
-                                            <li><a class="dropdown-item" href="#"></a></li>
-                                            <li><a class="dropdown-item" href="#"></a></li>
+                                        <ul class="dropdown-menu w">
+                                            <li class="p-4" v-for="(submenu, subIndex) in store.MenuList[index]" :key="subIndex">
+                                                {{submenu}}
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -46,7 +46,9 @@ export default {
 <style lang="scss" scoped>
 @use './styles/generals.scss';
 @use './styles/partials/variables' as*;
-
+.w{
+    width: 250px;
+}
     .navbar-container{
         margin: 20px 0;
         display: flex;
