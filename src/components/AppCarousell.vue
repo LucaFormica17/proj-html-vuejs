@@ -4,8 +4,27 @@ import { store } from '../store.js'
 export default {
     data() {
         return {
-            store
+            store,
+            mouseX: 0,
+            mouseY: 0,
         }
+    },
+    computed: {
+        movingStyle() {
+            let translateX = (this.mouseX / 10);
+            let translateY = (this.mouseY / 10);
+
+            return {
+                transform: `translate(${translateX}px, ${translateY}px)`,
+                transition: 'transform 0.3s ease-out',
+            };
+        },
+    },
+    methods: {
+        mousePosition(event) {
+            this.mouseX = event.clientX;
+            this.mouseY = event.clientY;
+        },
     },
 }
 </script>
@@ -50,8 +69,8 @@ export default {
                 </div>
             </div>
         </div>
-        <img class="pattern-1" src="../images/maxcoach-shape-01.png" alt="pattern">
-        <img class="pattern-2" src="../images/maxcoach-shape-02.png" alt="pattern">
+        <img class="pattern-1" src="../images/maxcoach-shape-01.png" alt="pattern" :style="movingStyle">
+        <img class="pattern-2" src="../images/maxcoach-shape-02.png" alt="pattern" :style="movingStyle">
     </div>
 </template>
 <style lang="scss" scoped>
