@@ -23,14 +23,70 @@ export default {
                     number: "1090",
                     area: "blog posts"
                 }
-            ]
+            ],
+
         }
     },
+    created() {
+        //chiamo la funzione handlescroll quando scrollo 
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    //utilizzo unmounted che viene chiamato quando la componente viene rimossa dal DOM
+    unmounted() {
+        //rimuovo l'eventlistener che viene chiamato in created 
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
+    methods: {
+        handleScroll() {
+            // verifica quando il componente è visibile nella finestra di visualizzazione utilizzando $el (proprietà di Vue.js che rappresenta l'elemento DOM associato al componente Vue)
+            let element = this.$el;
+            let windowHeight = window.innerHeight; //altezza della finestra
+            //element.getBoundingClientRect() restituisce la dimensione di un elemento e la sua posizione rispetto al viewport. Aggiungendo ".top" si avrà la distanza tra il bordo superiore dell'elemento e il bordo superiore della finestra di visualizzazione
+            let top = element.getBoundingClientRect().top;
+
+            // faccio un if, per verificare se la parte superiore del componente è visibile nella finestra di visualizzazione
+            if (top < windowHeight) {
+                // il componente è visibile, si avvia l'animazione del contatore
+                this.startCounterAnimation();
+                // rimuove l'event listener una volta che l'animazione è stata avviata
+                window.removeEventListener('scroll', this.handleScroll);
+            }
+        },
+        // animazione del contatore 
+        startCounterAnimation() {
+            this.counter.forEach((count, index) => {
+                this.animateCounter(parseInt(count.number), index);
+            });
+        },
+
+        animateCounter(targetNumber, index) {
+            let duration = 2000; // Durata dell'animazione in millisecondi
+
+            // determino la quantità di incremento del contatore in ogni intervallo di tempo, calcolandolo in base al numero finale desiderato (targetNumber) e alla durata totale dell'animazione (duration)
+            let step = Math.ceil(targetNumber / (duration / 16));
+
+            let currentNumber = 0;
+
+            let interval = setInterval(() => {
+                currentNumber += step; //incremento il valore di currentNumber 
+
+                if (currentNumber >= targetNumber) {
+                    currentNumber = targetNumber;
+                    clearInterval(interval);
+                }
+
+                this.counter[index].number = currentNumber.toString();
+
+            }, 16);
+        },
+    },
+
 }
 </script>
 <template lang="">
     
-    <div class="container moving-background">
+    <div class="container moving-background" >
         <div class="row">
             <div class="bordi col-3 d-flex flex-column align-items-center " v-for="count, index in counter">
                 <h4 class="my-3 text-center " >{{count.string}}</h4>
