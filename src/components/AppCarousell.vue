@@ -6,8 +6,21 @@ export default {
         return {
 
             active: 0,
-            store
+            store,
+            ouseX: 0,
+            mouseY: 0,
         }
+    },
+    computed: {
+        movingStyle() {
+            let translateX = (this.mouseX / 10);
+            let translateY = (this.mouseY / 10);
+
+            return {
+                transform: `translate(${translateX}px, ${translateY}px)`,
+                transition: 'transform 0.3s ease-out',
+            };
+        },
     },
     methods: {
         activeCount(n){
@@ -28,14 +41,18 @@ export default {
             else{
                 return n;
             }
-        }
+        },
+        mousePosition(event) {
+            this.mouseX = event.clientX;
+            this.mouseY = event.clientY;
+        },
     }
 
 }
 </script>
 <template lang="">
     <div class="bg py-5">
-        <div class="container-fluid">
+        <div class="container-fluid" @mousemove="mousePosition">
             <div class="row">
                 <div class="col-12">
                     <div class="text-container">
@@ -85,14 +102,14 @@ export default {
 
         .pattern-1{
             position: absolute;
-            bottom: 13%;
-            left: 16%;
+            bottom: 25%;
+            left: 10%;
         }
 
         .pattern-2{
             position: absolute;
-            bottom: 3%;
-            right: 10%;
+            bottom: 15%;
+            right: 20%;
         }
 
         .text-container{
