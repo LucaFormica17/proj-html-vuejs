@@ -1,10 +1,35 @@
 <script>
+import { store } from '../store'
 export default {
-    
+    data() {
+        return {
+            store,
+            mouseX: 0,
+            mouseY: 0,
+        }
+    },
+    computed: {
+        movingStyle() {
+            let translateX = (this.mouseX / 10);
+            let translateY = (this.mouseY / 10);
+
+            return {
+                transform: `translate(${translateX}px, ${translateY}px)`,
+                transition: 'transform 0.3s ease-out',
+            };
+        },
+    },
+    methods: {
+        mousePosition(event) {
+            this.mouseX = event.clientX;
+            this.mouseY = event.clientY;
+        },
+    },
+
 }
 </script>
 <template lang="">
-    <div class="container my-pos">
+    <div class="container my-pos" @mousemove="mousePosition">
         <div class="row">
             <div class="col-4 offset-4">
                 <div class="text-container">
@@ -14,7 +39,8 @@ export default {
                         <input type="email" class="form-control border border-0 bg-light" placeholder="Enter your email">
                         <button class="btn border border-start-0 my-bg" type="button" id="button-addon2">Subscribe</button>
                     </div>
-                    <img src="../images/maxcoach-shape-02.png" alt="pattern">
+                    <img class="moving-img-square" :style="movingStyle" src="../images/maxcoach-shape-07-100x100.png" alt="">
+                    <img class="moving-img-circle" :style="movingStyle" src="../images/maxcoach-shape-02.png" alt="pattern">
                 </div>
             </div>
         </div>
@@ -62,12 +88,19 @@ export default {
                 background-color: $main_violet;
             }
         }
-
-        img{
+        .moving-img-square{
             width: 7%;
             position: absolute;
-            bottom: 20%;
-            right: 14%;
+            bottom: 50%;
+            right: 28% ;
+            opacity: 0.5;
+        }
+        .moving-img-circle{
+            width: 7%;
+            position: absolute;
+            bottom: 50%;
+            right: 25%;
+            z-index: 1;
         }
     }
     
